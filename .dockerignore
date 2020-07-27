@@ -1,0 +1,24 @@
+# KEEP Dockerfile and docker-compose.yml unless sensitive
+# Dockerfile
+# docker-compose.yml
+
+# ignore .git and .cache folders
+.git
+.gitignore
+.cache
+
+# ignore all *.class files in all folders, including build root
+**/*.class
+
+# auth and other sensitive files
+auth.json
+id_rsa
+config.json
+
+# python project files
+**/__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
