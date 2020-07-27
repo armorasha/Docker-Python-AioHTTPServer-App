@@ -1,0 +1,14 @@
+# This 3 is docker-compose file's version, not python's version.
+# Docker-compose.yml had many previous versions of different formats. 
+# 3 is the latest.
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5858:5858"
+      # Volumes key mounts the project directory (current directory) on the host..
+      # ..to /code inside the container, allowing you to modify the.. 
+      # ..code on the fly, without having to rebuild the image. 
+    volumes:
+      - .:/code
