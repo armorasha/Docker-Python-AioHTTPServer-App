@@ -2,6 +2,7 @@
 # Use Python 3 image as launching point
 # Old 3.6 version python is needed for error-free aiohttp requests
 # -slim reduces docker image size from 330MB to 50MB in Docker Hub.
+# FROM python:3.6
 FROM python:3.6-slim
 
 
