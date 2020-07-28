@@ -14,6 +14,7 @@ Docker Root Dir: /var/lib/docker
 ```
 Use `$ docker info` to get this location.
 Leave the pulled image there, do not move it elsewhere.
+To access `/var/lib/docker` in WSL2+Win10 I used: https://nickjanetakis.com/blog/docker-tip-70-gain-access-to-the-mobylinux-vm-on-windows-or-macos
 
 3. Find the image id of the pulled image:
 ```
