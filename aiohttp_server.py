@@ -7,15 +7,15 @@ from aiohttp import web
 
 # Definition to handle async http requests
 async def handle_request(request):      
-    # gets prod_id "1007" from http request as in http://127.0.0.1:5859/1007
-    # default is "1001", if nothing is received as in http://127.0.0.1:5859
+    # gets prod_id "1007" from http request as in http://127.0.0.1:5858/1007
+    # default is "1001", if nothing is received as in http://127.0.0.1:5858
     prod_id = request.match_info.get('prod_id', "1001")
     text = "Received Product_ID: " + prod_id
     
     # prints in terminal
     print('Received request, replying with "{}".'.format(text))
     
-    # prints in browser - the received or default prod_id at http://127.0.0.1:5859/
+    # prints in browser - the received or default prod_id at http://127.0.0.1:5858/
     return web.Response(text=text)
 
 # Main Program using 'web' module from 'aiohttp' library
@@ -24,7 +24,7 @@ app = web.Application()
 app.router.add_get('/', handle_request) # for empty requests
 app.router.add_get('/{prod_id}', handle_request) # for requests with prod_id
 
-web.run_app(app, port=5858) # in http://127.0.0.1:5859
+web.run_app(app, port=5858) # in http://127.0.0.1:5858
 
 # dependency for aiohttp_server.py
 # aiohttp==2.0.7
