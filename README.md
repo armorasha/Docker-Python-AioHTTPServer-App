@@ -11,18 +11,24 @@ $ docker pull armoz13/python-aiohttp-server-app:latest
 
 2. In Linux, all pulled images will be stored in 
 
-```Docker Root Dir: /var/lib/docker```
+```
+Docker Root Dir: /var/lib/docker
+```
 
 Use `$ docker info` to get this location
 Leave the pulled image there, do not move it elsewhere.
 
 3. Find the image id of the pulled image:
 
-```$ docker images```
+```
+$ docker images
+```
 
 4. Run the image using:
 
-```$ docker run -p 5858:5858 <your_image_id>```
+```
+$ docker run -p 5858:5858 <your_image_id>
+```
 
 5858 is the port number the app is designed to run on- See files: aiohttp_server.py, docker-compose.yml
 Without port number in `docker run` command, this app container will run but it cannot serve to the browser.
