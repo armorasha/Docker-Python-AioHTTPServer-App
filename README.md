@@ -5,7 +5,9 @@ This app receives http requests to capture the product_id in the URL.
 
 1. Pull the image from Docker Hub to your local machine and run it in independently using:
 
-```$ docker pull armoz13/python-aiohttp-server-app:latest```
+```
+$ docker pull armoz13/python-aiohttp-server-app:latest
+```
 
 2. In Linux, all pulled images will be stored in 
 
